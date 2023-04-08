@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strong Password Generator</title>
+  </head>
+  <body>
+    <div>
+      <form action="" method="GET">
+        {% csrf_token %}
+        <h2 style="color: blue; text-align = center; ">Password Generator</h2>
+        <div />
+
+        <div>
+          <span>Generated Password :</span>
+          <input type="text" placeholder="{{pass}}" name="generated password" />
+          <button type="submit">Copy</button>
+        </div>
+
+        <br />
+
+        <div>
+          <span> Password Length : </span>
+          <select name="length" id="length">
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8" selected="selected">8</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="20">20</option>
+            <option value="24">21</option>
+            <option value="28">22</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="Ucase">Include Uper Case</label>
+          <input type="checkbox" id="Ucase" name="Ucase" />
+        </div>
+        <div>
+          <label for="Lcase">Include Lower Case :</label>
+          <input type="checkbox" id="Lcase" name="Lcase" />
+        </div>
+        <label for="Number">Include Numbers :</label>
+        <input type="checkbox" id="Number" name="number" />
+
+        <div>
+          <label for="Schar"> Include Special Characters :</label>
+          <input type="checkbox" id="Schar" name="Schar" />
+        </div>
+        <br />
+        <button type="submit">Generate Password</button>
+        <button type="reset">Reset</button>
+      </form>
+    </div>
+  </body>
+</html>
